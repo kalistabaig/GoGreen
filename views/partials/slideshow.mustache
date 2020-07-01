@@ -1,0 +1,15 @@
+ <div class="slideshow-container">
+        {{#slides}}
+         <div class="slide fade">
+            <img class="slideshow-image" src="{{image}}">
+            <div class="overlay"></div>
+            <div class="image-description">{{blurb}}</div>
+        </div>
+        {{/slides}}  
+    </div>
+
+    <div class="dots">
+        {{#slides}}
+        <span class="dot"></span> 
+        {{/slides}}   
+    </div>
