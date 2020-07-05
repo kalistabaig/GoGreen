@@ -3,10 +3,6 @@ const databaseFilename =  './database/database.json'
 const db = loadDatabase();
 const {brandSites, articles} = db
 
-
-
-
-
 function loadDatabase() {
     try {
         return JSON.parse(fs.readFileSync(databaseFilename))
@@ -17,7 +13,6 @@ function loadDatabase() {
 
 exports.getBrands = function() {
     return brandSites;
-
 }
 
 exports.getArticles = function() {
