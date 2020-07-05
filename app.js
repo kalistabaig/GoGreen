@@ -71,8 +71,9 @@ app.get('/admin/addArticle', (req, res) => {
 })
 
 app.get('/admin/deleteArticle/:id', (req, res) => {
-    const articles = database.getArticles();
-    console.log("Deleting article with id " , req.params.id);
+    const id = req.params.id
+    database.deleteArticle(id);
+    console.log("Deleted article with id " , id);
     res.redirect('/admin/articles')
 
 })

@@ -19,4 +19,14 @@ exports.getArticles = function() {
     return articles;
 }
 
+exports.deleteArticle = function(id) {
+    let i; 
+
+    for(i =0; i<articles.length; i++) {
+        if(articles[i].id == id ) {
+            articles.splice(i,1);
+        } 
+    }
+}
+
 
