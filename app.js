@@ -2,6 +2,7 @@
 const express = require('express') //returns in this case a function
 const path = require('path')
 const mustacheExpress = require('mustache-express')
+const database = require('./database')
 const app = express() //holds what the function returns which is an object
 const port = 3000
 
@@ -20,7 +21,8 @@ app.get('/', (req, res) => {
     const data = {
 
         slides: getSlides(),
-        products: getProducts()
+        products: getProducts(),
+        articles: database.getArticles()
     }
 
     res.render('index.mustache', data)
@@ -42,8 +44,39 @@ app.get('/on-the-go', (req, res) => {
 })
 
 app.get('/brands', (req, res) => {
-    res.render('brands.mustache');
+    const brands = database.getBrands();
+    res.render('brands.mustache', {brands});
 })
+
+app.get('/trending', (req, res) => {
+    res.render('trending.mustache');
+})
+
+app.get('/admin', (req,res) => {
+    res.render('admin/admin.mustache');
+})
+
+app.get('/admin/articles', (req,res) => {
+    const articles = database.getArticles();
+    res.render('admin/articles.mustache', {articles} );
+})
+
+app.get('/admin/brands', (req,res) => {
+    res.render('admin/brands.mustache');
+})
+
+app.get('/admin/addArticle', (req, res) => {
+    res.render();
+
+})
+
+app.get('/admin/deleteArticle/:id', (req, res) => {
+    const articles = database.getArticles();
+    console.log("Deleting article with id " , req.params.id);
+    res.redirect('/admin/articles')
+
+})
+
 
 function getSlides() {
     
@@ -100,4 +133,5 @@ function getProducts() {
     ]
 
 }
+
 app.listen(port, () => console.log('Example app listening at port 3000'))

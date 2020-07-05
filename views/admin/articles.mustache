@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles Admin</title>
+</head>
+<body>
+    <h1>Articles Admin Page</h1>
+    <a href="/admin/addArticle">add article</a>
+    <ul class="articles">
+        {{#articles}}
+        <li>{{description}} <a href="/admin/deleteArticle/{{id}}">Delete</a></li>
+        {{/articles}}
+    </ul>
+
+</body>
+</html>
