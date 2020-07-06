@@ -19,4 +19,12 @@ exports.getArticles = function() {
     return articles;
 }
 
+exports.deleteArticle = function(id) {
+    let removedArticleIndex = articles.findIndex(function(article){
+        return article.id == id;
+    });
+    console.log('removed article has index ', removedArticleIndex);
+    articles.splice(removedArticleIndex,1);
+}
+
 
