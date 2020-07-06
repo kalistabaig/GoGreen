@@ -3,10 +3,13 @@ const express = require('express') //returns in this case a function
 const path = require('path')
 const mustacheExpress = require('mustache-express')
 const database = require('./database')
+const bodyParser = require('body-parser');
+
 const app = express() //holds what the function returns which is an object
 const port = 3000
 
 app.use(express.static('public'))
+app.use(bodyParser.urlencoded({extended:false}))
 
 app.engine('mustache', mustacheExpress()) //setting view engine mustace
 app.engine('mustache', mustacheExpress(__dirname + '/views/partials', '.mustache'));
@@ -52,6 +55,8 @@ app.get('/trending', (req, res) => {
     res.render('trending.mustache');
 })
 
+//Admin
+
 app.get('/admin', (req,res) => {
     res.render('admin/admin.mustache');
 })
@@ -66,7 +71,7 @@ app.get('/admin/brands', (req,res) => {
 })
 
 app.get('/admin/addArticle', (req, res) => {
-    res.render();
+    res.render('admin/addArticle.mustache');
 
 })
 
@@ -75,6 +80,22 @@ app.get('/admin/deleteArticle/:id', (req, res) => {
     database.deleteArticle(id);
     console.log("Deleted article with id " , id);
     res.redirect('/admin/articles')
+
+})
+
+app.get('/admin/newArticle', (req, res) => {    
+    console.log('article title', req.body.articleId);
+    const newArticle ={
+        id: req.body.articleId,
+        image: req.body.imagePath,
+        description: req.body.articleTitle,
+        url: req.body.articleUrl
+    }
+
+    database.addArticle(newArticle);
+    res.redirect('/admin/articles');
+    
+
 
 })
 

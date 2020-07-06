@@ -7,5 +7,16 @@
 </head>
 <body>
     <h1>Add an Article</h1>
+    <form action="/admin/newArticle">
+        <label for="articleTitle">Article Title</label>
+        <input type="text" name="articleTitle" id="articleTitle" placeholder="Why Recycling is good" required >
+        <label for="imagePath">Image Path in File System</label>
+        <input type="text" name="imagePath" id="imagePath" placeholder="/img/photo.jpg" required>
+        <label for="articleId">Article ID</label>
+        <input type="text" name="articleId" id="articleId" placeholder="e.g. 3" required>
+        <label for="articleUrl">Link to Article</label>
+        <input type="text" name="articleUrl" id="articleUrl" placeholder="https://www.gogreen.com" required>
+        <input type="submit" name="submitBtn" id="submitBtn">
+    </form>
 </body>
 </html>
