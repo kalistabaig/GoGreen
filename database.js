@@ -20,13 +20,11 @@ exports.getArticles = function() {
 }
 
 exports.deleteArticle = function(id) {
-    let i; 
-
-    for(i =0; i<articles.length; i++) {
-        if(articles[i].id == id ) {
-            articles.splice(i,1);
-        } 
-    }
+    let removedArticleIndex = articles.findIndex(function(article){
+        return article.id == id;
+    });
+    console.log('removed article has index ', removedArticleIndex);
+    articles.splice(removedArticleIndex,1);
 }
 
 
