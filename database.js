@@ -11,6 +11,10 @@ function loadDatabase() {
     }
 }
 
+function saveDatabase() {
+    fs.writeFileSync(databaseFilename, JSON.stringify(db, null, 2))
+}
+
 exports.getBrands = function() {
     return brandSites;
 }
@@ -23,12 +27,30 @@ exports.deleteArticle = function(id) {
     let removedArticleIndex = articles.findIndex(function(article){
         return article.id == id;
     });
+
     console.log('removed article has index ', removedArticleIndex);
     articles.splice(removedArticleIndex,1);
+    saveDatabase();
 }
 
-exports.addArticle = function(newArticleObj) {
-    articles.push(newArticleObj);
+exports.addArticle = function(newArticle) {
+    newArticle.id = getNewId();
+    articles.push(newArticle);
+    saveDatabase();
+}
+
+function getNewId() {
+    let i;
+    let biggestId = 0;
+
+    for (i = 0; i < articles.length; i++) {
+        if (articles[i].id > biggestId) {
+            biggestId = articles[i].id;
+        }
+    }
+    let newId = biggestId + 1;
+
+    return newId;
 }
 
 
