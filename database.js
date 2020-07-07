@@ -28,7 +28,7 @@ exports.deleteArticle = function(id) {
 }
 
 exports.addArticle = function(newArticleObj) {
-    articles.splice(articles.length,0,newArticleObj);
+    articles.push(newArticleObj);
 }
 
 

@@ -83,20 +83,15 @@ app.get('/admin/deleteArticle/:id', (req, res) => {
 
 })
 
-app.get('/admin/newArticle', (req, res) => {    
-    console.log('article title', req.body.articleId);
+app.post('/admin/addArticle', (req, res) => {    
     const newArticle ={
         id: req.body.articleId,
         image: req.body.imagePath,
         description: req.body.articleTitle,
         url: req.body.articleUrl
     }
-
     database.addArticle(newArticle);
     res.redirect('/admin/articles');
-    
-
-
 })
 
 
