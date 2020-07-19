@@ -1,8 +1,12 @@
+:root {
+    --accent-color:  rgb(79,147,148);
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Basic Commercial",sans-serif;
+    color: #24292e;
 }
 
 .main-header {
@@ -47,7 +51,6 @@
 }
 .main-nav-items li a {
     text-decoration: none;
-    font-family: "Basic Commercial",sans-serif;
     color: black;
 }
 
@@ -221,7 +224,6 @@
       display: flex;
       flex-direction: column;
       align-items: center; /*align-xentre aign perpendicular to the flow of items, justify centre is in the direction of the items*/
-      background-color: lightgreen;
 
   }
   .product-card img {
@@ -246,7 +248,6 @@
     display: flex;
     align-items: center;
     padding: 60px 70px;
-
   }
 
   .feature-row img {
@@ -304,10 +305,80 @@
     
     
 }
-@media(max-width: 400px){
+
+.pageTitle {
+    padding-left: 65px;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 50px 30px 50px;
+  }
+
+.product-img {
+    width: 100%;
+    height: 293px;
+    object-fit: cover;
+}
+
+.bad-product, .good-product {
+    width: 50%;
+    padding: 0px 15px;
+}
+
+.product-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+.product-description p {
+    text-align: justify;
+}
+
+.good-product-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px;
+    margin-top: 8px;
+    color: whitesmoke;
+    background-color:var(--accent-color);
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #888888;    
+}
+
+.pageTitle {
+    font-size: 50px;
+}
+
+.row-divider {
+    display: none;
+}
+
+
+@media(max-width: 500px) {
     .article-card {
         width: 150px;
         height: 150px;
     }
+    .row {
+        flex-wrap: wrap;
+    }
+    .bad-product, .good-product {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .row-divider {
+        display: block;
+        color: rgba(0,0,0,0.0625);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        margin: 0px 15px;
+    }
+
 
 }

@@ -1,65 +1,119 @@
 {
   "brandSites": {
     "kitchenSites": [
-      "https://www.mrsmeyers.com/",
-      "https://bambooee.com/collections/cleaning-collection/products/bambooee",
-      "https://www.beeswrap.com/",
-      "https://colonyco.com/"
+      { 
+        "siteName": "Mrs. Meyers",
+        "url": "https://www.mrsmeyers.com/"
+      },
+      { 
+        "siteName": "Bambooee",
+        "url": "https://bambooee.com/collections/cleaning-collection/products/bambooee"
+      },
+      { 
+        "siteName": "Bees Wraps",
+        "url": "https://www.beeswrap.com/"
+      },
+      { 
+        "siteName": "Colony Co.",
+        "url": "https://colonyco.com/"
+      }
     ],
     "clothingSites": [
-      "https://www.wearethought.com/?utm_source=Affiliate&utm_medium=LinkShare&utm_campaign=QFGLnEolOWg&utm_content=15&utm_term=UKNetwork&ranSiteID=QFGLnEolOWg-AhL4A3ytPjancQEkrmMzeg&siteID=QFGLnEolOWg-AhL4A3ytPjancQEkrmMzeg",
-      "https://wearpact.com/?utm_source=73861&utm_medium=affiliate&utm_campaign=MAID1144&utm_content=73861&pjclkid=3185267450&clickId=3185267450",
-      "https://www.alternativeapparel.com/?___store=b2c&__country=CA",
-      "https://insoftfocus.com/"
+      { 
+        "siteName": "We Are Thought",
+        "url": "https://www.wearethought.com/?utm_source=Affiliate&utm_medium=LinkShare&utm_campaign=QFGLnEolOWg&utm_content=15&utm_term=UKNetwork&ranSiteID=QFGLnEolOWg-AhL4A3ytPjancQEkrmMzeg&siteID=QFGLnEolOWg-AhL4A3ytPjancQEkrmMzeg"
+      },
+      { 
+        "siteName": "Pact",
+        "url": "https://wearpact.com/?utm_source=73861&utm_medium=affiliate&utm_campaign=MAID1144&utm_content=73861&pjclkid=3185267450&clickId=3185267450"
+      },
+      { 
+        "siteName": "Alternative Apparel",
+        "url": "https://www.alternativeapparel.com/?___store=b2c&__country=CA"
+      },
+      { 
+        "siteName": "In Soft Focus",
+        "url": "https://insoftfocus.com/"
+      }
     ],
     "cleaningSites": [
-      "https://ca.attitudeliving.com/collections/menager/adulte-et-tout-petits",
-      "https://www.mrsmeyers.com/"
+      { 
+        "siteName": "Attitude Living",
+        "url": "https://www.alternativeapparel.com/?___store=b2c&__country=CA"
+      },
+      { 
+        "siteName": "Mrs. Meyers",
+        "url": "https://www.mrsmeyers.com/"
+      }
     ],
     "householdSites": [
-      "https://www.parachutehome.com/collections/quilts?utm_source=pepperjam&utm_medium=referral&utm_campaign=affiliate&affiliateID=21181&clickId=3185286952",
-      "https://pfcandleco.com/"
+      { 
+        "siteName": "Parachute Home",
+        "url": "https://www.parachutehome.com/collections/quilts?utm_source=pepperjam&utm_medium=referral&utm_campaign=affiliate&affiliateID=21181&clickId=3185286952"
+      },
+      { 
+        "siteName": "PF Candle Co.",
+        "url": "https://pfcandleco.com/"
+      }
     ],
     "personalCareSites": [
-      "https://www.lush.ca/en/home",
-      "https://lithelashes.com/",
-      "https://www.hadaka.ca/shop-hyde",
-      "https://www.avalonorganics.com/en/"
+      { 
+        "siteName": "Lush Cosmetics",
+        "url": "https://www.lush.ca/en/home"
+      },
+      { 
+        "siteName": "Lithe lashes",
+        "url": "https://lithelashes.com/"
+      },
+      { 
+        "siteName": "Hadaka",
+        "url": "https://www.hadaka.ca/shop-hyde"
+      },
+      { 
+        "siteName": "Avalon Organics",
+        "url": "https://www.avalonorganics.com/en/"
+      }
     ],
     "generalSites": [
-      "https://ecoandamour.com/",
-      "https://lovefresh.com/"
+      { 
+        "siteName": "Eco and Amour",
+        "url": "https://ecoandamour.com/"
+      },
+      { 
+        "siteName": "Love Fresh",
+        "url": "https://lovefresh.com/"
+      }
     ]
   },
   "articles": [
     {
       "id": 2,
       "image": "/img/goodenergy.jpg",
-      "description": "Article Name?",
+      "description": "Ultimate Guide To Eco Friendly Living",
       "url": "https://www.goodenergy.co.uk/blog/2017/08/22/ultimate-guide-eco-friendly-living/"
     },
     {
       "id": 3,
       "image": "/img/canadianIssues.jpg",
-      "description": "Article Name?",
+      "description": "Environmental Issues in Canada",
       "url": "https://thenarwhal.ca/topics/environmental-issues-canada/"
     },
     {
       "id": 5,
       "image": "/img/thrifting.jpg",
-      "description": "Article Name?",
+      "description": "Why Thrifting is good for the Planet",
       "url": "https://serc.berkeley.edu/why-thrifting-is-good-for-the-planet-not-just-your-wallet/#:~:text=Buying%20secondhand%20means%20you'll,Less%20resources%20used%20and%20wasted.&text=Through%20thrifting%2C%20you%20keep%20the,Less%20pollution."
     },
     {
       "id": 7,
       "image": "/img/gardening.jpg",
-      "description": "Article Name?",
+      "description": "Four Reasons Why Gardening is Good for the Environment",
       "url": "https://www.patioproductions.com/blog/news/4-reasons-why-gardening-is-good-for-the-environment/"
     },
     {
       "id": 8,
       "image": "/img/carbonReduction.jpg",
-      "description": "Article Name?",
+      "description": "35 Ways to Reduce Your Carbon Footprint",
       "url": "https://blogs.ei.columbia.edu/2018/12/27/35-ways-reduce-carbon-footprint/"
     }
   ]
