@@ -3,14 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitchen Dupes</title>
+    <title>Sustainable Brands</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     {{>header}}
 
-    <h2>Certified Eco Friendly Brands</h2>
+    <h1>Certified Eco Friendly Brands</h2>
+    {{#brands}}
+
+    <br>
+    <h2>Kitchen</h2>
+    {{#kitchenSites}}
+    <li><a href="{{url}}">{{siteName}}</a></li>
+    {{/kitchenSites}}<br>
+
+    <h2>Clothing</h2>
+    {{#clothingSites}}
+    <li><a href="{{url}}">{{siteName}}</a></li>
+    {{/clothingSites}}<br>
+
+    <h2>Cleaning</h2>
+    {{#cleaningSites}}
+    <li><a href="{{url}}">{{siteName}}</a></li>
+    {{/cleaningSites}}
+
+    <h2>House Hold</h2>
+    {{#householdSites}}
+    <li><a href="{{url}}">{{siteName}}</a></li>
+    {{/householdSites}}
+
+    <h2>Personal Care</h2>
+    {{#personalSites}}
+    <li><a href="{{url}}">{{siteName}}</a></li>
+    {{/personalSites}}
+
+    <h2>A Little Bit of Everything</h2>
+    {{#generalSites}}
+    <li><a href="{{url}}">{{siteName}}</a></li>
+    {{/generalSites}}
+
+
+    {{/brands}}
+   
+
+
     
     <script src="/js/index.js"></script>
 </body>

@@ -23,6 +23,7 @@ exports.getArticles = function() {
     return articles;
 }
 
+
 exports.deleteArticle = function(id) {
     let removedArticleIndex = articles.findIndex(function(article){
         return article.id == id;

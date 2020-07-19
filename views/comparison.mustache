@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bath & Beauty</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    {{>header}}
+    
+    <section class="product-comparison">
+        <h1 class="pageTitle">{{title}}</h1>
+        {{#products}}
+        <div class="row">
+            <div class="bad-product">
+                <img class="product-img" src="{{badProduct.image}}">
+                <div class="product-description">
+                    <h3>{{badProduct.header}}</h3>
+                    <p>
+                        {{badProduct.blurb}}
+                    </p>
+                </div>
+            </div>
+
+            <div class="good-product">
+                <img class="product-img" src="{{goodProduct.image}}">
+                <div class="product-description">
+                    <h3>{{goodProduct.header}}</h3>
+                    <p>
+                        {{goodProduct.blurb}}
+                    </p>
+                    <a href="{{goodProduct.url}}">Lush</a>
+                </div>
+            </div>
+           
+        </div>
+        {{/products}}
+    </section>
+    <script src="/js/index.js"></script>
+</body>
+</html>
