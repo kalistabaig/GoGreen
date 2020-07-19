@@ -23,5 +23,11 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 5 seconds
 }
-
-
+function toggleHamburgerNavItems() {
+  var x = document.getElementById("hamburger-links");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}

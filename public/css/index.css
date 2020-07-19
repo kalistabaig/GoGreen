@@ -30,9 +30,7 @@
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    /* background-color: cadetblue; */
 }
-
 
 .main-nav-items {
     list-style: none;
@@ -57,6 +55,23 @@
 .main-nav-items li a:hover {
     text-decoration: underline;
 }
+.hamburger-container {
+    display: none;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+#hamburger-links{
+    display: none;
+    background-color: gray;
+}
+
+.hamburger-nav-items li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: rgb(155,220,172);
+}
 
 .hidden {
     display: none;
@@ -66,7 +81,7 @@
     display: inline-block;
     position: relative;
     /* background-color: darkgoldenrod; */
-    padding-left: 100px;
+    padding-left: 10px;
 }
 
 .search-box {
@@ -378,6 +393,12 @@
         border-bottom-width: 1px;
         border-bottom-style: solid;
         margin: 0px 15px;
+    }
+    .main-nav {
+        display: none;
+    }
+    .hamburger-container {
+        display: flex;
     }
 
 
