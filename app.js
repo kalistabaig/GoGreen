@@ -42,12 +42,12 @@ app.get('/bath-and-body', (req, res) => {
 
 app.get('/household-cleaning', (req, res) => {
     const products = getHouseholdProducts();
-    res.render('comparison.mustache', {products, tite:"Household Products"});
+    res.render('comparison.mustache', {products, title:"Household Products"});
 })
 
 app.get('/on-the-go', (req, res) => {
     const products = getOnTheGoProducts();
-    res.render('comparison.mustache', {products, tite:"On the Go Products"});
+    res.render('comparison.mustache', {products, title:"On the Go Products"});
 })
 
 app.get('/brands', (req, res) => {
@@ -173,7 +173,8 @@ function getBBproducts() {
                 image: "/img/lush.jpg",
                 header: "Lush",
                 blurb: "Clean beauty without the expense. Lush is an ",
-                url: "https://www.lush.ca"
+                url: "https://www.lush.ca",
+                siteName: "Lush"
             }
         },
         {
@@ -191,7 +192,8 @@ function getBBproducts() {
                 image: "/img/rms.jpg",
                 header: "Beautiful inside and out",
                 blurb: "Clean beauty without the expense. Lush is an ",
-                url: "https://www.lush.ca"
+                url: "https://www.rmsbeauty.com/",
+                siteName: "RMS"
             }
         }
     ]
@@ -216,7 +218,8 @@ function getHouseholdProducts() {
                 blurb: `Eco friendly Toilet paper, yup we have that too! Its something you use evryday and making th eswitch is easy.you get all the same 
                         perks that uou have from your old toilet paper plus the added benefit that the one you are using is eco friendly. A great brand that is offered in many 
                         retail stores and online is Seventh Generation that has 100% recycled toilet paper! `,
-                url: "https://www.seventhgeneration.com/bathroom-tissue-2-ply"
+                url: "https://www.seventhgeneration.com/bathroom-tissue-2-ply",
+                siteName: "Seventh Generation"
             }
         },
         {
@@ -236,12 +239,12 @@ function getHouseholdProducts() {
                 out there that you can choose from depending on your specific needs. A popular brand is Blueland's 'The Clean up Kit'. 
                 Using this product, you won't be contributing to landfill waste becasu the cleaning bottle is resuable. Simply fill the bottle with water, and the cleaning solution
                 and clean away. You'll never have to throw the bottle out plus you get multiple uses out of it.`,
-                url: "https://www.blueland.com/collections/our-kits/products/the-clean-up-kit?utm_source=RAN&utm_medium=affiliates&utm_campaign=10&utm_content=TnL5HPStwNw&ranMID=44816&ranEAID=TnL5HPStwNw&ranSiteID=TnL5HPStwNw-OWmKgKiHWrzGaX94h3AX5Q"
+                url: "https://www.blueland.com/collections/our-kits/products/the-clean-up-kit?utm_source=RAN&utm_medium=affiliates&utm_campaign=10&utm_content=TnL5HPStwNw&ranMID=44816&ranEAID=TnL5HPStwNw&ranSiteID=TnL5HPStwNw-OWmKgKiHWrzGaX94h3AX5Q",
+                siteName: "Blueland"
             }
         }
     ]
 }
-
 function getKichenProducts() {
     return [
         {
@@ -260,7 +263,8 @@ function getKichenProducts() {
                         you take your food out of the fridge. With the Bees wax wraps you can not only reduce your plastic use, but they are reusable and can be used multiple times before they start to wear out! Some great ones you can buy are
                         from Nature Bee. You can even try and be more adventerous and make your own, all you need is a thin breathable fabric and some bees wax that you can buy online. Simply spread
                         out the cloth and pur melted bess way on it.`,
-                url: "https://www.naturebeewraps.ca"
+                url: "https://www.naturebeewraps.ca",
+                siteName: "Nature Bees Wraps"
             }
         },
         {
@@ -277,7 +281,8 @@ function getKichenProducts() {
                 header: "Reusable Produce Bags",
                 blurb: `Using a reusable produce bag is one of the easiest and cheapest way to be more eco-friendly. Theyre convenient to carry around in a purse or backpack
                         so they are always on you. These bags usually cost $5 and can be bought in many places. A popular option is Ikea's Kungfors bag`,
-                url: "https://www.ikea.com/us/en/p/kungsfors-mesh-bag-set-of-2-natural-20372834/"
+                url: "https://www.ikea.com/us/en/p/kungsfors-mesh-bag-set-of-2-natural-20372834/",
+                siteName: "Ikea"
             }
         }
     ]
@@ -303,8 +308,9 @@ function getOnTheGoProducts() {
                 Go Green provides resources. such as articles from popular blogs and news outlets on information about how important it is that humans start 
                 thinking about more green options, the environmental impact different industries have on our climate, and my more. not only can you find information
                 about why it is so important to be sustainable the site also provides information on ways you can make small changes in your everyday life to reduce your
-                impact on the environment. Checkout the different straws from bamboo to stainless steel that <a href="https://strawhutco.com">Straw hut Co</a> has to offer.`,
-                url: "https://strawhutco.com"
+                impact on the environment. Checkout the different straws from bamboo to stainless steel that Straw hut Co has to offer.`,
+                url: "https://strawhutco.com",
+                siteName: "Starw Hut Co."
             }
         },
         {
@@ -325,7 +331,8 @@ function getOnTheGoProducts() {
                         with a reusable bag. Reusables bags are eco-friendly with many  designed from upcycled plastic or all sustainable resourced fabrics, but they are also conveniant.
                         Many these days are designed for the person on the go. they are compact to fit in a purse, pocket or backpack but un fold to be quite large. its an easy and cheap way
                         be eco-friendly. Cute reusable bags can be bought almost anywhere now, checkout Baggu's wide variety.`,
-                url: "https://baggu.com/collections/reusable-bags"
+                url: "https://baggu.com/collections/reusable-bags",
+                siteName: "Baggu"
             }
         }
     ]
