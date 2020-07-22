@@ -403,3 +403,30 @@
 
 
 }
+
+.trending-product-img {
+    width: 160px;
+    height: 170px;
+}
+
+.trending-category {
+    padding-top: 25px;
+    letter-spacing: 3px;
+    font-weight:lighter;
+}
+
+.trending-product-name {
+    padding-top: 15px;
+}
+
+.trending-product-description {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.trending-card {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding-right: 15px;
+}
