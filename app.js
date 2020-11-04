@@ -6,7 +6,7 @@ const database = require('./database')
 const bodyParser = require('body-parser');
 
 const app = express() //holds what the function returns which is an object
-const port = 3000
+const port = 3000;
 
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended:false}))
@@ -17,19 +17,16 @@ app.set('view engine', 'mustache')
 app.set('views', __dirname + '/views')
 
 
-
-
-
 app.get('/', (req, res) => {
     const data = {
-
         slides: getSlides(),
         products: getProducts(),
+        lifestyleProducts: getLifestyleProducts(),
         articles: database.getArticles()
     }
-
     res.render('index.mustache', data)
 })
+
 app.get('/kitchen', (req, res) => {
     const products = getKichenProducts();
     res.render('comparison.mustache',{products, title:"Kitchen Products"});
@@ -58,6 +55,14 @@ app.get('/brands', (req, res) => {
 
 app.get('/trending', (req, res) => {
     res.render('trending.mustache');
+})
+
+app.get('/tiny-house', (req, res) => {
+    res.render('tinyHome.mustache');
+})
+
+app.get('/home-gardening', (req, res) => {
+    res.render('homeGardening.mustache');
 })
 
 //Admin
@@ -105,15 +110,18 @@ function getSlides() {
     return [
         {
             image: "/img/buyLocal.jpg", 
-            blurb: "SHOP LOCAL"
+            blurb: "SHOP LOCAL",
+            page: '/home-gardening'
         },
         {   
             image: "/img/greenCleaning.jpg", 
-            blurb: "CLEAN CLEANER"
+            blurb: "CLEAN CLEANER",
+            page: '/household-cleaning'
         },
         {   
             image: "/img/tinyHome.png", 
-            blurb: "SUSTAINABLE LIVING"
+            blurb: "SUSTAINABLE LIVING",
+            page: '/tiny-house'
         }
     ]
 }
@@ -121,36 +129,94 @@ function getSlides() {
 function getProducts() {
     return [
         {
-            image: "/img/tide.jpg", 
-            description: "Tide Original Laundry Detergent"
+            image: '/img/cilantro.jpg', 
+            product: 'MiGardener',
+            description: 'Cilantro seeds'
+
         },
         {   
-            image: "/img/windex.png", 
-            description: "Windex Glass Cleaner"
+            image: '/img/rahua-shampoo.png', 
+            product: 'Rahua Rainforest Grown Beauty',
+            description: 'Rahua classic shampoo created with sustainably sourced ingredients'
+
         },
         {   
-            image: "/img/bounty.png", 
-            description: "Paper Towel"
+            image: '/img/roma.jpg', 
+            product: 'MiGardener',
+            description: 'Roma tomato seeds'
         },
         {
-            image: '/img/plasticBag.png',
-            description: 'Grocery Bags'
+            image: '/img/straw.png',
+            product: 'Green Turtle Co.',
+            description: 'Turtle Green Telescopic resuble straw'
         },
         {
-            image: "/img/tide.jpg", 
-            description: "Tide Original Laundry Detergent"
+            image: "/img/soil-test.jpg", 
+            product: "MiGardener",
+            description: 'Soil testing kit'
         },
         {   
-            image: "/img/windex.png", 
-            description: "Windex Glass Cleaner"
+            image: "/img/fenty.png", 
+            product: "Fenty Skin",
+            description: 'Hydra Visor SPF Suncreen formulated with reef safe ingredients'
         },
         {   
-            image: "/img/bounty.png", 
-            description: "Paper Towel"
+            image: "/img/rosemary.jpg", 
+            product: "MiGardener",
+            description: 'Rosemary seeds'
         },
         {
-            image: '/img/plasticBag.png',
-            description: 'Grocery Bags'
+            image: '/img/rare.png',
+            product: 'Rare Beauty',
+            description: 'Designed to reduce plastic with refillable products'
+        }
+    ]
+
+}
+
+function getLifestyleProducts() {
+    return [
+        {
+            image: '/img/poopbags.png', 
+            product: 'Earth Rated Poop Bags',
+            description: 'Compostable poop bags made from recycled materials'
+
+        },
+        {   
+            image: '/img/rahua-shampoo.png', 
+            product: 'Rahua Rainforest Grown Beauty',
+            description: 'Rahua classic shampoo created with sustainably sourced ingredients'
+
+        },
+        {   
+            image: '/img/method.png', 
+            product: 'Method',
+            description: 'Created with naturally derived, biodegradable ingredients'
+        },
+        {
+            image: '/img/straw.png',
+            product: 'Green Turtle Co.',
+            description: 'Turtle Green Telescopic resuble straw'
+        },
+        {
+            image: "/img/resuablefacepads.png", 
+            product: "Ten & Co.",
+            description: 'Resuable dish cloths made from 100% biodegradable material'
+        },
+        {   
+            image: "/img/fenty.png", 
+            product: "Fenty Skin",
+            description: 'Hydra Visor SPF Suncreen formulated with reef safe ingredients'
+        },
+        {   
+            image: "/img/produce_bag.png", 
+            product: "The Green Way",
+            description: '100% cotton Market Bag to replace single use plastics'
+        },
+        {
+            image: '/img/rare.png',
+            product: 'Rare Beauty',
+            description: 'Designed to reduce plastic with refillable products'
         }
     ]
 
