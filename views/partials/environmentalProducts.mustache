@@ -1,13 +1,14 @@
 <div class="trending-container">
-    <h3 class="trending-category">Trending Products</h3>
+    <h3 class="trending-category">Popular Products for a Green Life</h3>
     <section class="products">
-        {{#lifestyleProducts}}
+        {{#products}}
         <div class="product-card">
                 <img src="{{image}}">
                 <h5>{{product}}</h5>
                 <p>{{description}}</p>
         </div>
-        {{/lifestyleProducts}}
+        {{/products}}
     </section>
+    <a class="see-more" href="/trending">See More</a>
 </div>
 

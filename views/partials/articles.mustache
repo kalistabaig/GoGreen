@@ -1,10 +1,13 @@
-<section class="articles">
-    {{#articles}}
-    <div class="article-card">
-        <a href="{{url}}">
-            <img class="article-image" src="{{image}}">
-        </a>
-        <p class="article-description">{{description}}</p>   
-    </div>
-    {{/articles}}
-</section>
+<div class="articles-container">
+    <h3 class="articles-category">Blogs / Articles</h3>
+    <section class="articles">
+        {{#articles}}
+        <div class="article-card">
+            <a href="{{url}}">
+                <img class="article-image" src="{{image}}">
+            </a>
+            <p class="article-description">{{description}}</p>   
+        </div>
+        {{/articles}}
+    </section>  
+</div>
